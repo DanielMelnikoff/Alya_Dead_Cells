@@ -2667,7 +2667,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_4d7sh")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqns4"]
-size = Vector2(83, 58)
+size = Vector2(75, 66)
 
 [node name="Node2D" type="Node2D" unique_id=56812395]
 
@@ -2708,17 +2708,20 @@ tile_set = SubResource("TileSet_ir8iy")
 script = ExtResource("4_d21ai")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1079188687]
-position = Vector2(741.4375, 537.75)
+position = Vector2(741, 539)
 scale = Vector2(0.17916667, 0.1791667)
 texture = ExtResource("5_rj586")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1681130205]
-position = Vector2(712.5, 542)
+position = Vector2(708.5, 542)
 shape = SubResource("RectangleShape2D_hqns4")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=2021430826]
 position = Vector2(710, 545)
 position_smoothing_enabled = true
-rotation_smoothing_enabled = true
+drag_left_margin = 0.15
+drag_top_margin = 0.15
+drag_right_margin = 0.15
+drag_bottom_margin = 0.15
 editor_draw_limits = true
 editor_draw_drag_margin = true
