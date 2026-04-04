@@ -1,10 +1,10 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1775302291
+::res://::1775303448
 icon.svg::CompressedTexture2D::6043698240991371177::1775053570::1775053570::1::::<><><>0<>0<>a03b64e7db0959e8e88c502b905e5e64<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://Scenes/::1775302291
-damage_object.tscn::PackedScene::3887898302710882037::1775302267::0::1::::<><><>0<>0<><>::uid://dgidkqn8wm25x::::res://damage_zone.gd<>uid://d18g22g7jxih4::::res://Sprites/sun_background.png
-node_2d.tscn::PackedScene::2482657273827931995::1775302309::0::1::::<><><>0<>0<><>::uid://g2fcumira7ik::::res://Sprites/sky_background.png<>uid://ccewi2waqmscs::::res://Sprites/forest_background.png<>uid://d18g22g7jxih4::::res://Sprites/sun_background.png<>uid://cef6i7njoif5x::::res://character_body_2d.gd<>uid://bbaj62js81nck::::res://Sprites/Character.png<>uid://bd5r641bry43b::::res://Sprites/png-klev-club-b4wo-p-pikselnaya-trava-png-13.png<>uid://bvnld8jhqyjov::::res://Scenes/damage_object.tscn
-::res://Scripts/::0
+::res://Scenes/::1775302346
+damage_object.tscn::PackedScene::3887898302710882037::1775302309::0::1::::<><><>0<>0<><>::uid://dgidkqn8wm25x::::res://Scripts/damage_zone.gd<>uid://d18g22g7jxih4::::res://Sprites/sun_background.png
+node_2d.tscn::PackedScene::2482657273827931995::1775302346::0::1::::<><><>0<>0<><>::uid://g2fcumira7ik::::res://Sprites/sky_background.png<>uid://ccewi2waqmscs::::res://Sprites/forest_background.png<>uid://d18g22g7jxih4::::res://Sprites/sun_background.png<>uid://cef6i7njoif5x::::res://Scripts/character_body_2d.gd<>uid://bbaj62js81nck::::res://Sprites/Character.png<>uid://bd5r641bry43b::::res://Sprites/png-klev-club-b4wo-p-pikselnaya-trava-png-13.png<>uid://bvnld8jhqyjov::::res://Scenes/damage_object.tscn
+::res://Scripts/::1775302309
 character_body_2d.gd::GDScript::5065816845093240871::1775301953::0::1::::<>CharacterBody2D<><>0<>0<><>::
 damage_zone.gd::GDScript::7597111005842656031::1775301819::0::1::::<>Area2D<><>0<>0<><>::
 ::res://Sprites/::1775302282
