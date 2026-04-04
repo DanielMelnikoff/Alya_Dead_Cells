@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d18g22g7jxih4"
-path="res://.godot/imported/sun_background.png-a97b7943225232d8704f33c95a9ac4fa.ctex"
+uid="uid://bd5r641bry43b"
+path="res://.godot/imported/png-klev-club-b4wo-p-pikselnaya-trava-png-13.png-c74ca14eea2e641c60413c543a2e45da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sun_background.png"
-dest_files=["res://.godot/imported/sun_background.png-a97b7943225232d8704f33c95a9ac4fa.ctex"]
+source_file="res://Sprites/png-klev-club-b4wo-p-pikselnaya-trava-png-13.png"
+dest_files=["res://.godot/imported/png-klev-club-b4wo-p-pikselnaya-trava-png-13.png-c74ca14eea2e641c60413c543a2e45da.ctex"]
 
 [params]
 

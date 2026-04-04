@@ -1,2 +1,4 @@
 res://character_body_2d.gd
 res://node_2d.tscn
+res://damage_zone.gd
+res://Scenes/node_2d.tscn

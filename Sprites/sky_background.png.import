@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccewi2waqmscs"
-path="res://.godot/imported/forest_background.png-50d3404601b62466d131437aa44014da.ctex"
+uid="uid://g2fcumira7ik"
+path="res://.godot/imported/sky_background.png-9cb71e604128b92de8d02af1a0732b1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://forest_background.png"
-dest_files=["res://.godot/imported/forest_background.png-50d3404601b62466d131437aa44014da.ctex"]
+source_file="res://Sprites/sky_background.png"
+dest_files=["res://.godot/imported/sky_background.png-9cb71e604128b92de8d02af1a0732b1d.ctex"]
 
 [params]
 

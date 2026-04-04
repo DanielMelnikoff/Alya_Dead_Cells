@@ -1,6 +1,11 @@
 Sprite2D
+Timer
+CollisionShape2D
+Area2D
+StaticBody2D
+Label
+TextEdit
+TileMapLayer
 Parallax2D
 Camera2D
-CollisionShape2D
 CharacterBody2D
-TileMapLayer
