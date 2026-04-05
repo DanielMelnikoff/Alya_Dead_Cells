@@ -1,2 +1,2 @@
-res://Scripts/damage_zone.gd
-res://Scenes/damage_object.tscn
+res://Scripts/character_body_2d.gd
+res://Scenes/node_2d.tscn
