@@ -1,2 +1,4 @@
 res://Scenes/map.tscn
 res://Sprites/maptileset.tres
+res://Scenes/node_2d.tscn
+res://Scenes/player.tscn
