@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://eo3mjcgdyr32"]
+
+[ext_resource type="Script" uid="uid://ck6u2dv1pj15h" path="res://Scripts/enemy_2d.gd" id="1_1f0kj"]
+[ext_resource type="Texture2D" uid="uid://bbaj62js81nck" path="res://Sprites/Character.png" id="2_afpow"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_chwn1"]
+size = Vector2(56, 50)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v7gqg"]
+radius = 584.309
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ooml"]
+radius = 76.105194
+
+[node name="Enemy2D" type="CharacterBody2D" unique_id=632468046]
+script = ExtResource("1_1f0kj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1676826471]
+position = Vector2(13.999999, -9.999999)
+scale = Vector2(0.13500005, 0.13500005)
+texture = ExtResource("2_afpow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1619023687]
+position = Vector2(-13, -11)
+shape = SubResource("RectangleShape2D_chwn1")
+
+[node name="VisionArea" type="Area2D" parent="." unique_id=1311541155]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VisionArea" unique_id=93012092]
+position = Vector2(-8, -12)
+shape = SubResource("CircleShape2D_v7gqg")
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=1312612006]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=1039834585]
+position = Vector2(-6, -10)
+shape = SubResource("CircleShape2D_2ooml")
+
+[node name="Timer" type="Timer" parent="." unique_id=327610470]
+autostart = true
+
+[connection signal="body_entered" from="VisionArea" to="." method="_on_vision_area_body_entered"]
+[connection signal="body_exited" from="VisionArea" to="." method="_on_vision_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_attack_timer_timeout"]

@@ -1,21 +1,28 @@
 [gd_scene format=3 uid="uid://bvnld8jhqyjov"]
 
-[ext_resource type="Script" uid="uid://dgidkqn8wm25x" path="res://Scripts/damage_zone.gd" id="1_bmtuk"]
+[ext_resource type="Script" uid="uid://dgidkqn8wm25x" path="res://Scripts/damage_sprite.gd" id="1_bmtuk"]
 [ext_resource type="Texture2D" uid="uid://d18g22g7jxih4" path="res://Sprites/sun_background.png" id="2_4q15e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kdubu"]
-size = Vector2(106, 134)
+size = Vector2(96, 71)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8ty8"]
+size = Vector2(81, 65.5)
 
 [node name="DamageObject" type="Area2D" unique_id=1794017169]
 script = ExtResource("1_bmtuk")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1698896558]
-position = Vector2(-11, -32)
-shape = SubResource("RectangleShape2D_kdubu")
-
-[node name="Timer" type="Timer" parent="." unique_id=1318274261]
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=633983290]
-position = Vector2(-8.000005, -23.000023)
 scale = Vector2(0.20592844, 0.20592844)
 texture = ExtResource("2_4q15e")
+
+[node name="Timer" type="Timer" parent="." unique_id=1318274261]
+wait_time = 0.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1698896558]
+shape = SubResource("RectangleShape2D_kdubu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2103724301]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=189387414]
+shape = SubResource("RectangleShape2D_b8ty8")
