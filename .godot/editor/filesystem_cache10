@@ -1,36 +1,32 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1775836706
+::res://::1775849775
 icon.svg::CompressedTexture2D::6043698240991371177::1775823869::1775823869::1::::<><><>0<>0<>a03b64e7db0959e8e88c502b905e5e64<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://Scenes/::1775845843
-damage_object.tscn::PackedScene::3887898302710882037::1775844311::0::1::::<><><>0<>0<><>::uid://dgidkqn8wm25x::::res://Scripts/damage_sprite.gd
-enemy.tscn::PackedScene::311378644510631751::1775838500::0::1::::<><><>0<>0<><>::uid://ck6u2dv1pj15h::::res://Scripts/enemy_2d.gd<>uid://bbaj62js81nck::::res://Sprites/Character.png
-map.tscn::PackedScene::3624134928398127543::1775845345::0::1::::<><><>0<>0<><>::uid://blh05mjjkk5y1::::res://Sprites/maptileset.tres<>uid://cviwqolhsubu6::::res://Scenes/bakground.tscn<>uid://bgdd3qvfk1pg::::res://Sprites/bg/set1_background.png<>uid://bbmvac8mwc6qp::::res://Scenes/node_2d.tscn<>uid://bvnld8jhqyjov::::res://Scenes/damage_object.tscn<>uid://cw14sbpl7ar88::::res://Scenes/bigdamageobject.tscn
-node_2d.tscn::PackedScene::2482657273827931995::1775845843::0::1::::<><><>0<>0<><>::uid://chex2qh7ghhg0::::res://Scenes/playerBlue_walk1.png<>uid://c5i1nvppbm070::::res://Scenes/playerBlue_walk2.png<>uid://cef6i7njoif5x::::res://Scripts/character_body_2d.gd<>uid://xyvk8jupw18h::::res://Scenes/playerBlue_walk3.png<>uid://bgbhqt7lbqrhm::::res://Scenes/playerBlue_walk4.png<>uid://b8738l6juwovp::::res://Scenes/playerBlue_walk5.png
+::res://Scenes/::1775849262
+animations.gd::GDScript::8591342357066629022::1775847152::0::1::::<>RefCounted<><>0<>0<><>::
 bakground.tscn::PackedScene::6264687205023341483::1775844273::0::1::::<><><>0<>0<><>::uid://cpkv5kj6emvgl::::res://Sprites/bg/set1_hills.png
 bigdamageobject.tscn::PackedScene::6372462762346973927::1775844998::0::1::::<><><>0<>0<><>::uid://dgidkqn8wm25x::::res://Scripts/damage_sprite.gd
-playerBlue_walk1.png::CompressedTexture2D::5273866343787197017::1775845795::1775845796::1::::<><><>0<>0<>56f45d997c76f1dc8bce69d07b2593ef<>res://.godot/imported/playerBlue_walk1.png-4a4f83479d76d851cffff4a33d6bf6db.ctex::
-playerBlue_walk2.png::CompressedTexture2D::6896624682538132173::1775845795::1775845796::1::::<><><>0<>0<>9d928f12d5bdb9a48f779cafcd197e40<>res://.godot/imported/playerBlue_walk2.png-de64174247a35b311198419caee3a9a1.ctex::
-playerBlue_walk3.png::CompressedTexture2D::1665183132662768049::1775845795::1775845796::1::::<><><>0<>0<>ce59e71a61bae08369fa4f126b26dcd4<>res://.godot/imported/playerBlue_walk3.png-45e0d65e56cf234a9a224a757e72a147.ctex::
-playerBlue_walk4.png::CompressedTexture2D::2810072762806367534::1775845795::1775845796::1::::<><><>0<>0<>df0eb26e4932e390202b9c1d0b187877<>res://.godot/imported/playerBlue_walk4.png-db0c31a26d8d60f826d1e5b1484da3aa.ctex::
-playerBlue_walk5.png::CompressedTexture2D::4770472244956720737::1775845795::1775845796::1::::<><><>0<>0<>71823aac9a8d448140fa3b8e4ead2b4b<>res://.godot/imported/playerBlue_walk5.png-834598e16812dee3cfbac877f5bb50eb.ctex::
+damage_object.tscn::PackedScene::3887898302710882037::1775844311::0::1::::<><><>0<>0<><>::uid://dgidkqn8wm25x::::res://Scripts/damage_sprite.gd
+enemy.tscn::PackedScene::311378644510631751::1775838500::0::1::::<><><>0<>0<><>::uid://ck6u2dv1pj15h::::res://Scripts/enemy_2d.gd<>uid://bbaj62js81nck::::res://Sprites/Character.png
+map.tscn::PackedScene::3624134928398127543::1775847802::0::1::::<><><>0<>0<><>::uid://blh05mjjkk5y1::::res://Sprites/maptileset.tres<>uid://cviwqolhsubu6::::res://Scenes/bakground.tscn<>uid://bgdd3qvfk1pg::::res://Sprites/bg/set1_background.png<>uid://bbmvac8mwc6qp::::res://Scenes/node_2d.tscn<>uid://bvnld8jhqyjov::::res://Scenes/damage_object.tscn<>uid://cw14sbpl7ar88::::res://Scenes/bigdamageobject.tscn
+node_2d.tscn::PackedScene::2482657273827931995::1775847646::0::1::::<><><>0<>0<><>::uid://drp3uvxwx81bq::::res://Sprites/Player Blue/playerBlue_stand.png<>uid://eklb2eu2s7xm::::res://Sprites/Player Blue/playerBlue_up1.png<>uid://cef6i7njoif5x::::res://Scripts/character_body_2d.gd<>uid://c8mct1lxgux4x::::res://Sprites/Player Blue/playerBlue_up2.png<>uid://bdblwx18ksdks::::res://Sprites/Player Blue/playerBlue_up3.png<>uid://dkf5ud5jxlliy::::res://Sprites/Player Blue/playerBlue_walk1.png<>uid://cqe7wuqhqudo8::::res://Sprites/Player Blue/playerBlue_walk2.png<>uid://ccmsmocvmo1wg::::res://Sprites/Player Blue/playerBlue_walk3.png<>uid://jkhr4htjac8u::::res://Sprites/Player Blue/playerBlue_walk4.png<>uid://byoijgkaxffny::::res://Sprites/Player Blue/playerBlue_walk5.png
 tilesheet_complete_2X.png::CompressedTexture2D::3270718013109152587::1775812395::1775824214::1::::<><><>0<>0<>027b7412e67c882baf4bd9fe6fb1a700<>res://.godot/imported/tilesheet_complete_2X.png-0e83ce3a7c0e6a8e8f231db0b8b882e3.ctex::
-::res://Scripts/::1775841824
-character_body_2d.gd::GDScript::5065816845093240871::1775841824::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Scripts/::1775849220
+character_body_2d.gd::GDScript::5065816845093240871::1775847332::0::1::::<>CharacterBody2D<><>0<>0<><>::
 damage_sprite.gd::GDScript::7597111005842656031::1775823869::0::1::::<>Area2D<><>0<>0<><>::
 enemy_2d.gd::GDScript::5539988261645834531::1775838161::0::1::::<>CharacterBody2D<><>0<>0<><>::
-::res://Sprites/::1775846087
+::res://Sprites/::1775849263
 Character.png::CompressedTexture2D::2457212772773750754::1775823869::1775823869::1::::<><><>0<>0<>4442a2a197f40b616a573a82c67a2547<>res://.godot/imported/Character.png-18ed598cc7c72eda505e714c19da321a.ctex::
 forest_background.png::CompressedTexture2D::4922828078008632318::1775823869::1775823869::1::::<><><>0<>0<>0f9a98e1fb874d2d872cbacb5e1588cd<>res://.godot/imported/forest_background.png-db731f916664338d35d84b3682f7be84.ctex::
-png-klev-club-b4wo-p-pikselnaya-trava-png-13.png::CompressedTexture2D::2660007659128273053::1775823869::1775823869::1::::<><><>0<>0<>f565b90c937d1f5a7d1bd8f285efcb1a<>res://.godot/imported/png-klev-club-b4wo-p-pikselnaya-trava-png-13.png-c74ca14eea2e641c60413c543a2e45da.ctex::
 maptileset.tres::TileSet::3174520751232336402::1775844865::0::1::::<><><>0<>0<><>::uid://bmumioqifcmnb::::res://Scenes/tilesheet_complete_2X.png
+png-klev-club-b4wo-p-pikselnaya-trava-png-13.png::CompressedTexture2D::2660007659128273053::1775823869::1775823869::1::::<><><>0<>0<>f565b90c937d1f5a7d1bd8f285efcb1a<>res://.godot/imported/png-klev-club-b4wo-p-pikselnaya-trava-png-13.png-c74ca14eea2e641c60413c543a2e45da.ctex::
 sky_background.png::CompressedTexture2D::477179487130344618::1775823869::1775823869::1::::<><><>0<>0<>83096d6e9ddc00a9165f907c4551b89a<>res://.godot/imported/sky_background.png-9cb71e604128b92de8d02af1a0732b1d.ctex::
 sun_background.png::CompressedTexture2D::9052710398810303219::1775823869::1775823869::1::::<><><>0<>0<>f268c4ecf27b57b5a941638e44d291af<>res://.godot/imported/sun_background.png-5aa9ef53179a14739b9bcc5071977213.ctex::
-::res://Sprites/bg/::1775842691
+::res://Sprites/bg/::1775849262
 set1_background.png::CompressedTexture2D::82764114854329004::1775842378::1775842426::1::::<><><>0<>0<>aa12e3b9b8669f53be53f31467db8171<>res://.godot/imported/set1_background.png-dfb1ae8aba8b4e1973b53615181a93a0.ctex::
 set1_hills.png::CompressedTexture2D::5847646970713609067::1775842378::1775842426::1::::<><><>0<>0<>861d47fb92b0b3c2b73910988fe52afa<>res://.godot/imported/set1_hills.png-d75d971b07b69696ef0bbb90e913b49c.ctex::
 set1_tiles.png::CompressedTexture2D::2165723163659375466::1775842378::1775842426::1::::<><><>0<>0<>6e89e2ca2799320aeccd56f6639a255f<>res://.godot/imported/set1_tiles.png-09e72407dddd586a1c868cc2f243561c.ctex::
-::res://Sprites/BlueWizard/::1775846088
-::res://Sprites/BlueWizard/2BlueWizardIdle/::1775846087
+::res://Sprites/BlueWizard/::1775849263
+::res://Sprites/BlueWizard/2BlueWizardIdle/::1775849262
 Chara - BlueIdle00000.png::CompressedTexture2D::2692023672212225868::1775846035::1775846093::1::::<><><>0<>0<>dca9106a1e30b0de10873886d26d2d9e<>res://.godot/imported/Chara - BlueIdle00000.png-d8bfe55fd0d6d03cb827d944e248be96.ctex::
 Chara - BlueIdle00001.png::CompressedTexture2D::6013555047609399900::1775846036::1775846093::1::::<><><>0<>0<>4a3da10f91d60305e1010e3df9c52032<>res://.godot/imported/Chara - BlueIdle00001.png-190ad8a312abf6661b912d4d63e5dfc1.ctex::
 Chara - BlueIdle00002.png::CompressedTexture2D::4775508785123861767::1775846036::1775846093::1::::<><><>0<>0<>20cc68b167586f8784e26a6b72cc67df<>res://.godot/imported/Chara - BlueIdle00002.png-b847a3c2f4d327f502563f0bda172a9b.ctex::
@@ -51,7 +47,7 @@ Chara - BlueIdle00016.png::CompressedTexture2D::8792993432144196265::1775846036:
 Chara - BlueIdle00017.png::CompressedTexture2D::8796142337139527295::1775846036::1775846093::1::::<><><>0<>0<>28c331162cfb9cf84ad21a714bcfed2e<>res://.godot/imported/Chara - BlueIdle00017.png-edf2d0abae74125c62778624cde67ab4.ctex::
 Chara - BlueIdle00018.png::CompressedTexture2D::5114407343717040630::1775846036::1775846093::1::::<><><>0<>0<>3cf6af90bb41cef88dc86717c16ec3be<>res://.godot/imported/Chara - BlueIdle00018.png-3ea31e0e95e4d9c2e2dba30b2cd65cb8.ctex::
 Chara - BlueIdle00019.png::CompressedTexture2D::3221083265539307875::1775846036::1775846093::1::::<><><>0<>0<>0316e49219b55a2957914c4db246079e<>res://.godot/imported/Chara - BlueIdle00019.png-ec8070f90c8250aca7bcea0dcd47c46f.ctex::
-::res://Sprites/BlueWizard/2BlueWizardJump/::1775846087
+::res://Sprites/BlueWizard/2BlueWizardJump/::1775849262
 CharaWizardJump_00000.png::CompressedTexture2D::66703017225923911::1775846036::1775846092::1::::<><><>0<>0<>31b226dc816903bf260e68e2aa1b0ad8<>res://.godot/imported/CharaWizardJump_00000.png-3d3364581606eba12e27421f89a4cad4.ctex::
 CharaWizardJump_00001.png::CompressedTexture2D::1046392432106443047::1775846036::1775846092::1::::<><><>0<>0<>0748839e2a8aee89f6164af4d84b0b1a<>res://.godot/imported/CharaWizardJump_00001.png-a446dc7360f48d277c7c7b1169e791f3.ctex::
 CharaWizardJump_00002.png::CompressedTexture2D::417209405672817713::1775846036::1775846092::1::::<><><>0<>0<>4d621c2122983042ec48be117cc60e98<>res://.godot/imported/CharaWizardJump_00002.png-d784e1c9d77fc6d48da975122173a507.ctex::
@@ -60,7 +56,7 @@ CharaWizardJump_00004.png::CompressedTexture2D::8995702259197953818::1775846036:
 CharaWizardJump_00005.png::CompressedTexture2D::1126417064110760800::1775846036::1775846093::1::::<><><>0<>0<>842484ae6d4f10aef293b1302277f160<>res://.godot/imported/CharaWizardJump_00005.png-4d0289f2a2b0f0960aab40fa93f191a2.ctex::
 CharaWizardJump_00006.png::CompressedTexture2D::1900976766343466652::1775846036::1775846093::1::::<><><>0<>0<>c3d3fc274e2b6347d876c6e08ebe72af<>res://.godot/imported/CharaWizardJump_00006.png-8d3314abab971fbf72d3f40eda8ef1d1.ctex::
 CharaWizardJump_00007.png::CompressedTexture2D::1222918018749648082::1775846036::1775846093::1::::<><><>0<>0<>bffa7025bde337d091812dd53733802d<>res://.godot/imported/CharaWizardJump_00007.png-26e905fe3c9ee6e2149a195e7db839b9.ctex::
-::res://Sprites/BlueWizard/2BlueWizardJump/Dash2/::1775846087
+::res://Sprites/BlueWizard/2BlueWizardJump/Dash2/::1775849262
 DashBlue_00000.png::CompressedTexture2D::2227552037905501941::1775846036::1775846093::1::::<><><>0<>0<>f59d12b2bd5b7ffa4e51b52a98d7baf9<>res://.godot/imported/DashBlue_00000.png-096a8d26bb5e9e026bff36db575f82ee.ctex::
 DashBlue_00001.png::CompressedTexture2D::2074912160479274028::1775846036::1775846093::1::::<><><>0<>0<>0655902fe649e5a13360cdd6835ea6d1<>res://.godot/imported/DashBlue_00001.png-8ad0ef671686c7c8b6610960a22ae56f.ctex::
 DashBlue_00002.png::CompressedTexture2D::7685052099380954665::1775846036::1775846093::1::::<><><>0<>0<>31dd8a655ad4259db85cede5ea9a8339<>res://.godot/imported/DashBlue_00002.png-873be7b6023441a5932d4699ca48f7d9.ctex::
@@ -77,7 +73,7 @@ DashBlue_00012.png::CompressedTexture2D::7700803688097836810::1775846036::177584
 DashBlue_00013.png::CompressedTexture2D::3163769553641777415::1775846036::1775846093::1::::<><><>0<>0<>96eadc77129f59e578ed3f68c03a682f<>res://.godot/imported/DashBlue_00013.png-5a030c8b92bae37413db867807fe6982.ctex::
 DashBlue_00014.png::CompressedTexture2D::3941687998066445043::1775846036::1775846093::1::::<><><>0<>0<>76d2138997a61cba0afac870e17f1ae1<>res://.godot/imported/DashBlue_00014.png-8437bab64e122edd5265232cbb1f7cac.ctex::
 DashBlue_00015.png::CompressedTexture2D::8156278615028351028::1775846036::1775846093::1::::<><><>0<>0<>50895e0b89f2db009fd3d0ffc9aac2bf<>res://.godot/imported/DashBlue_00015.png-7f816a3b41702b24658957740c2d1c3f.ctex::
-::res://Sprites/BlueWizard/2BlueWizardJump/Dash3/::1775846087
+::res://Sprites/BlueWizard/2BlueWizardJump/Dash3/::1775849262
 Dash3_00000.png::CompressedTexture2D::3351987705741476783::1775846036::1775846093::1::::<><><>0<>0<>9d05e5184754c2aac60414fc1bdc1c3e<>res://.godot/imported/Dash3_00000.png-66f4344196fb31e83e14d674c1ef164f.ctex::
 Dash3_00001.png::CompressedTexture2D::4522018569926431641::1775846036::1775846093::1::::<><><>0<>0<>9e4358f7d8a7451d44b64c535f5f6377<>res://.godot/imported/Dash3_00001.png-f9d5524a823e4dc6b7e0b5982c85483a.ctex::
 Dash3_00002.png::CompressedTexture2D::2154621960362014525::1775846036::1775846093::1::::<><><>0<>0<>c4f0808bcc8f0acfd72e4488bcd657a7<>res://.godot/imported/Dash3_00002.png-095dba57784fceca107cea575d491c57.ctex::
@@ -94,7 +90,7 @@ Dash3_00012.png::CompressedTexture2D::3584102096527198442::1775846036::177584609
 Dash3_00013.png::CompressedTexture2D::281189884593122012::1775846036::1775846093::1::::<><><>0<>0<>666cb9dc18410d130ce0d19f4568038d<>res://.godot/imported/Dash3_00013.png-ffc7ad0750871460ee4a2eb3d5a12810.ctex::
 Dash3_00014.png::CompressedTexture2D::4608889536093362452::1775846036::1775846093::1::::<><><>0<>0<>2a72426af87f4b21ddcd6ce961f7d5f6<>res://.godot/imported/Dash3_00014.png-d220da1e608bb69a690e4dfe77fb53b8.ctex::
 Dash3_00015.png::CompressedTexture2D::3294157583225816951::1775846036::1775846093::1::::<><><>0<>0<>c967f025511915101cd69911857f68b0<>res://.godot/imported/Dash3_00015.png-fdb906aad24ed4ccb260d256a042fd33.ctex::
-::res://Sprites/BlueWizard/2BlueWizardJump/DashEffect/::1775846088
+::res://Sprites/BlueWizard/2BlueWizardJump/DashEffect/::1775849263
 BlueWizardDash_00000.png::CompressedTexture2D::4221502663150214365::1775846036::1775846093::1::::<><><>0<>0<>99bb1556d65c1c1f58ab491e38d5d6b7<>res://.godot/imported/BlueWizardDash_00000.png-399f9fa1ef48767971642fa3893d19a6.ctex::
 BlueWizardDash_00001.png::CompressedTexture2D::4980100636788748317::1775846036::1775846093::1::::<><><>0<>0<>85f9c05e3a7bdaddffb8ab1f2bdb001c<>res://.godot/imported/BlueWizardDash_00001.png-3f4edb63324f39e78a265704fd8d8a05.ctex::
 BlueWizardDash_00002.png::CompressedTexture2D::4489217160436212472::1775846036::1775846093::1::::<><><>0<>0<>d5f6ee3a2340621dd98e9cec5b53acda<>res://.godot/imported/BlueWizardDash_00002.png-7f364ae5dd5fc0a0e6168e58c083c68d.ctex::
@@ -111,7 +107,7 @@ BlueWizardDash_00012.png::CompressedTexture2D::5802292296690480002::1775846036::
 BlueWizardDash_00013.png::CompressedTexture2D::1266100978384917233::1775846036::1775846092::1::::<><><>0<>0<>ae3d67d2fbe22eeca655a73a8a0ca1b7<>res://.godot/imported/BlueWizardDash_00013.png-1fe97d7199809e0a30ef5288aa489fa4.ctex::
 BlueWizardDash_00014.png::CompressedTexture2D::1830932149768677587::1775846036::1775846092::1::::<><><>0<>0<>eaf5af80749912bf851a42a435622f18<>res://.godot/imported/BlueWizardDash_00014.png-016a3eafcdef7fdbebe903f9a4a98468.ctex::
 BlueWizardDash_00015.png::CompressedTexture2D::2783399671284913561::1775846036::1775846092::1::::<><><>0<>0<>1e2548f2a6a2665d666fe3b2f6b3608a<>res://.godot/imported/BlueWizardDash_00015.png-0ff212dcb68026f3bf1f67d4f44e7923.ctex::
-::res://Sprites/BlueWizard/2BlueWizardWalk/::1775846088
+::res://Sprites/BlueWizard/2BlueWizardWalk/::1775849263
 Chara_BlueWalk00000.png::CompressedTexture2D::4711873051084374119::1775846036::1775846093::1::::<><><>0<>0<>fa0c77a2c4867429fcc3c01a1a9c2147<>res://.godot/imported/Chara_BlueWalk00000.png-dd9a967dada51a0960ff631c69c746ab.ctex::
 Chara_BlueWalk00001.png::CompressedTexture2D::1199505584701471605::1775846036::1775846093::1::::<><><>0<>0<>7ca62c1bf7c47a6d03126128d4ffd4dc<>res://.godot/imported/Chara_BlueWalk00001.png-129615f6e1ce01efa1864f61138f7267.ctex::
 Chara_BlueWalk00002.png::CompressedTexture2D::7916441871952075809::1775846036::1775846093::1::::<><><>0<>0<>cdba60fcbc87912946945d0c4ff8f3f7<>res://.godot/imported/Chara_BlueWalk00002.png-cddd3153a0a94e44d315908e81d5c749.ctex::
@@ -132,7 +128,7 @@ Chara_BlueWalk00016.png::CompressedTexture2D::5229802137466201098::1775846036::1
 Chara_BlueWalk00017.png::CompressedTexture2D::4241719553010932207::1775846036::1775846093::1::::<><><>0<>0<>292fa3b95110f698e0582f496f10efb0<>res://.godot/imported/Chara_BlueWalk00017.png-4a18d3e3f22e99c0e0ca14e4767b5293.ctex::
 Chara_BlueWalk00018.png::CompressedTexture2D::2447325824075518098::1775846036::1775846093::1::::<><><>0<>0<>e11a240d214a5a1dd3d82c4a465e1345<>res://.godot/imported/Chara_BlueWalk00018.png-06fb04e7f086dcacfe07aa3d641ea44f.ctex::
 Chara_BlueWalk00019.png::CompressedTexture2D::3825775862457400883::1775846036::1775846093::1::::<><><>0<>0<>df4fea9de02288e1bd274a54a85a2ac1<>res://.godot/imported/Chara_BlueWalk00019.png-20b72be0558057bcc66d9a2d0a3a4a4f.ctex::
-::res://Sprites/Player Blue/::1775838321
+::res://Sprites/Player Blue/::1775849263
 playerBlue_dead.png::CompressedTexture2D::3758979194557685951::1775838319::1775838321::1::::<><><>0<>0<>108f700a7511b6e8f9daeeb2839cf1a9<>res://.godot/imported/playerBlue_dead.png-f48e634f46d94d0e4cc7849b6a106577.ctex::
 playerBlue_duck.png::CompressedTexture2D::3837321553647707517::1775838319::1775838321::1::::<><><>0<>0<>10a36e542f800c13ee11afade1946591<>res://.godot/imported/playerBlue_duck.png-0fa602f6f6ef878ab311e5d3f84ceb9e.ctex::
 playerBlue_fall.png::CompressedTexture2D::498357951486059644::1775838319::1775838321::1::::<><><>0<>0<>4ac5dd274927b9c2b90ca8e0bf71cdd5<>res://.godot/imported/playerBlue_fall.png-ed2397c4509545addd0340f872dd980c.ctex::
