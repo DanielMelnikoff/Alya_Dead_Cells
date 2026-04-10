@@ -1,5 +1,11 @@
-res://Scripts/character_body_2d.gd
-res://Scenes/damage_object.tscn
-res://Scripts/damage_sprite.gd
-res://Scenes/node_2d.tscn
+res://Scenes/map.tscn
+res://Sprites/maptileset.tres
+res://Scripts/enemy_2d.gd
 res://Scenes/enemy.tscn
+res://Scenes/node_2d.tscn
+res://Scripts/character_body_2d.gd
+res://Scenes/bakground.tscn
+res://Scenes/background1.tscn
+res://Scenes/damage_object.tscn
+res://Scenes/bigdamageobject.tscn
+res://Scenes/animations.gd
