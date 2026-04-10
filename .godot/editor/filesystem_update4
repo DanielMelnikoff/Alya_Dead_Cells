@@ -1,5 +1,2 @@
-res://Scripts/character_body_2d.gd
-res://Scenes/damage_object.tscn
-res://Scripts/damage_sprite.gd
-res://Scenes/node_2d.tscn
-res://Scenes/enemy.tscn
+res://Scenes/map.tscn
+res://Sprites/maptileset.tres

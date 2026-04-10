@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cviwqolhsubu6"]
+
+[ext_resource type="Texture2D" uid="uid://cpkv5kj6emvgl" path="res://Sprites/bg/set1_hills.png" id="1_puw8s"]
+
+[node name="Node2D" type="Node2D" unique_id=1422476301]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1650411252]
+scroll_scale = Vector2(0.5, 0.5)
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D" unique_id=1602574076]
+offset_left = -1413.0
+offset_top = -3396.0
+offset_right = 1591.8757
+offset_bottom = 764.0
+texture = ExtResource("1_puw8s")
