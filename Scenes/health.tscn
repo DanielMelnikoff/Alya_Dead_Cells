@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqi22n03nny0g"]
 
 [ext_resource type="Texture2D" uid="uid://c5fndw5wbwvfg" path="res://Sprites/Apple.png" id="1_14o4j"]
-[ext_resource type="Script" uid="uid://dli1vumkaalcw" path="res://Scenes/health.gd" id="2_aswr4"]
+[ext_resource type="Script" uid="uid://dli1vumkaalcw" path="res://Scripts/health.gd" id="2_aswr4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aswr4"]
 radius = 38.0
@@ -136,7 +136,7 @@ animations = [{
 "speed": 16.0
 }]
 
-[node name="Node2D" type="Node2D" unique_id=677922561 groups=["health"]]
+[node name="Health" type="Node2D" unique_id=677922561 groups=["health"]]
 script = ExtResource("2_aswr4")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=748796846]

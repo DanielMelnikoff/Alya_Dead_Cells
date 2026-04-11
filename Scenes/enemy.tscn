@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ck6u2dv1pj15h" path="res://Scripts/enemy_2d.gd" id="1_1f0kj"]
 [ext_resource type="Texture2D" uid="uid://bv6t1o2216xaq" path="res://Sprites/Enemies/enemyWalking_1.png" id="2_287tu"]
+[ext_resource type="PackedScene" uid="uid://dqi22n03nny0g" path="res://Scenes/health.tscn" id="2_0830c"]
 [ext_resource type="Texture2D" uid="uid://d3gy736v8jo3v" path="res://Sprites/Enemies/enemyWalking_2.png" id="3_0830c"]
 [ext_resource type="Texture2D" uid="uid://c51lbfockugyk" path="res://Sprites/Enemies/enemyWalking_3.png" id="4_ghaa6"]
 
@@ -50,8 +51,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_0830c"]
 radius = 32.06244
 
-[node name="Enemy2D" type="CharacterBody2D" unique_id=632468046]
+[sub_resource type="LabelSettings" id="LabelSettings_0830c"]
+font_size = 24
+
+[node name="Enemy2D" type="CharacterBody2D" unique_id=632468046 groups=["enemy"]]
 script = ExtResource("1_1f0kj")
+heal = ExtResource("2_0830c")
 
 [node name="VisionArea" type="Area2D" parent="." unique_id=1311541155]
 scale = Vector2(1.5, 1.5)
@@ -66,6 +71,7 @@ position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_287tu")
 
 [node name="Timer" type="Timer" parent="." unique_id=327610470]
+wait_time = 0.2
 autostart = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1104240749]
@@ -79,6 +85,16 @@ speed_scale = 2.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1619023687]
 position = Vector2(-2, 19)
 shape = SubResource("CircleShape2D_0830c")
+
+[node name="Label" type="Label" parent="." unique_id=416661288]
+offset_left = -101.0
+offset_top = -113.0
+offset_right = 98.0
+offset_bottom = -79.0
+text = "120"
+label_settings = SubResource("LabelSettings_0830c")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_entered" from="VisionArea" to="." method="_on_vision_area_body_entered"]
 [connection signal="body_exited" from="VisionArea" to="." method="_on_vision_area_body_exited"]

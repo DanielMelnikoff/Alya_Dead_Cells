@@ -1,9 +1,9 @@
-Timer
+Label
 CollisionShape2D
 Area2D
+Timer
 AnimatedSprite2D
 Control
-Label
 CanvasLayer
 TextureRect
 Parallax2D

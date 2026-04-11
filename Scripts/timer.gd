@@ -24,10 +24,8 @@ func spawn_enemies():
 		var enemy = enemy_scene.instantiate()
 		
 		var side = 1 if randf() > 0.5 else -1
-		var distance = randf_range(2000.0, 2000.0)
+		var distance = randf_range(1000.0, 2000.0)
 		var offset_x = side * distance
 		
-		var offset_y = randf_range(30.0, 60.0)
-		
-		enemy.global_position = player.global_position + Vector2(offset_x, offset_y)
+		enemy.global_position = player.global_position + Vector2(offset_x, -400)
 		add_child(enemy)

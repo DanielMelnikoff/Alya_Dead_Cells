@@ -1,15 +1,7 @@
 res://Scenes/enemy.tscn
 res://Sprites/maptileset.tres
-res://Scripts/character_body_2d.gd
 res://Scripts/enemy_2d.gd
-res://Scenes/map.tscn
 res://Scenes/player.tscn
-res://gui.tscn
-res://timer.gd
-res://Scenes/gui.tscn
-res://Scripts/timer.tscn.gd
+res://Scripts/character_body_2d.gd
 res://Scripts/timer.gd
-res://Scripts/health.tscn
 res://Scenes/health.tscn
-res://Scenes/health.gd
-res://Scenes/bigdamageobject.tscn

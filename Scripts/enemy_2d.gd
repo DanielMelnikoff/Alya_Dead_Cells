@@ -5,6 +5,9 @@ const JUMP_VELOCITY = 1200
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var target_player = null
+var HP = 120
+var damagable = true
+@export var heal: PackedScene
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 var current_animation: String = ""
@@ -49,6 +52,21 @@ func update_animation(direction: float) -> void:
 	elif direction < 0:
 		animated_sprite.flip_h = true
 
+func take_damage(amount):
+	HP-=amount
+	$Label.text = str(HP)
+	print(HP)
+	if HP<=0:
+		die()
+	damagable = false
+	await get_tree().create_timer(0.2).timeout
+	damagable = true
+
+func die():
+	var health = heal.instantiate()
+	health.global_position = global_position
+	get_parent().add_child(health)
+	queue_free()
 
 func _on_vision_area_body_entered(body):
 	if body.is_in_group("player"):
@@ -64,5 +82,5 @@ func _on_attack_timer_timeout():
 	var overlapping_bodies = $DamageArea.get_overlapping_bodies()
 	for body in overlapping_bodies:
 		if body.is_in_group("player"):
-			body._take_damage(15, global_position)
+			body._take_damage(5, global_position)
 			$Timer.start()
