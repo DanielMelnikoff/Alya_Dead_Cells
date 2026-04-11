@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cbi8tagx2awh5"]
+
+[ext_resource type="Script" uid="uid://c37wvdofc1rwm" path="res://timer.gd" id="1_80edf"]
+
+[node name="Node2D" type="Node2D" unique_id=1419445817]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1504377226]
+script = ExtResource("1_80edf")
+
+[node name="timer_count" type="Label" parent="CanvasLayer" unique_id=430199559]
+offset_left = -28.0
+offset_top = -184.0
+offset_right = 27.0
+offset_bottom = -161.0
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

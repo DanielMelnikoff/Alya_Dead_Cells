@@ -5,13 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://eklb2eu2s7xm" path="res://Sprites/Player Blue/playerBlue_up1.png" id="3_pu2lt"]
 [ext_resource type="Texture2D" uid="uid://c8mct1lxgux4x" path="res://Sprites/Player Blue/playerBlue_up2.png" id="4_ukyrk"]
 [ext_resource type="Texture2D" uid="uid://bdblwx18ksdks" path="res://Sprites/Player Blue/playerBlue_up3.png" id="5_7dp3o"]
+[ext_resource type="Texture2D" uid="uid://dxcigci08d3e1" path="res://Sprites/Player Blue/playerBlue_roll.png" id="6_f1ek2"]
 [ext_resource type="Texture2D" uid="uid://dkf5ud5jxlliy" path="res://Sprites/Player Blue/playerBlue_walk1.png" id="6_h4iuc"]
 [ext_resource type="Texture2D" uid="uid://cqe7wuqhqudo8" path="res://Sprites/Player Blue/playerBlue_walk2.png" id="7_fd4e3"]
 [ext_resource type="Texture2D" uid="uid://ccmsmocvmo1wg" path="res://Sprites/Player Blue/playerBlue_walk3.png" id="8_qqcod"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2ooml"]
 radius = 65.0
-height = 148.0
+height = 140.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_hh5uf"]
 font_size = 24
@@ -42,6 +43,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("6_f1ek2")
+}],
+"loop": true,
+"name": &"roll",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("6_h4iuc")
 }, {
 "duration": 1.0,
@@ -57,6 +66,10 @@ animations = [{
 "name": &"walk",
 "speed": 7.0
 }]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f1ek2"]
+radius = 67.0
+height = 140.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1011022873 groups=["player"]]
 z_index = 100
@@ -93,5 +106,14 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(0, -44.000004)
 scale = Vector2(2.7222223, 2.7222223)
 sprite_frames = SubResource("SpriteFrames_j2wod")
-animation = &"walk"
+animation = &"idle"
 speed_scale = 2.0
+
+[node name="PickupArea" type="Area2D" parent="." unique_id=1803549317]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=402389736]
+position = Vector2(-3, -41)
+shape = SubResource("CapsuleShape2D_f1ek2")
+
+[node name="HealthDecayTimer" type="Timer" parent="." unique_id=1131824366]
+autostart = true

@@ -1,14 +1,21 @@
 extends CharacterBody2D
 
 const SPEED = 500.0
-const JUMP_VELOCITY = -800
+const JUMP_VELOCITY = -900
 var HP = 100
 var jumpable = true
 var damagable = true
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 var current_animation: String = ""
+@onready var pickup_area: Area2D = $PickupArea
 
+func _ready():
+	pickup_area.area_entered.connect(_on_area_entered)
+	$HealthDecayTimer.timeout.connect(_on_health_decay_timeout)
+
+
+#Даник, твоя часть кода, получение дамага
 func _take_damage(amount, source_pos):
 	HP -= amount
 	$Camera2D/HP.text = str(HP)
@@ -49,7 +56,7 @@ func _physics_process(delta: float) -> void:
 	
 	update_animation()
 
-
+#анимация перса
 func update_animation() -> void:
 	var new_animation: String
 	
@@ -59,7 +66,6 @@ func update_animation() -> void:
 	elif Input.is_key_pressed(KEY_A):
 		direction = -1.0
 	
-	# Определяем нужную анимацию
 	if not is_on_floor():
 		new_animation = "jump"
 	elif direction != 0:
@@ -75,3 +81,21 @@ func update_animation() -> void:
 		animated_sprite.flip_h = false
 	elif direction < 0:
 		animated_sprite.flip_h = true
+
+#при касании с яблоком хилит на 20 хп и удаляет его
+
+func _on_area_entered(area: Area2D):
+	if area.get_parent().is_in_group("health"):
+		var hp_label = get_node("Camera2D/HP")
+		var current_hp = int(hp_label.text)
+		var hp_after = str(current_hp+20)
+		hp_label.text=hp_after
+		area.get_parent().queue_free()
+
+#каждые 2 секунды отнимает хп
+
+func _on_health_decay_timeout():
+	var current_HP = int($Camera2D/HP.text)
+	if current_HP > 100:
+		current_HP -= 2
+		$Camera2D/HP.text = str(current_HP)
