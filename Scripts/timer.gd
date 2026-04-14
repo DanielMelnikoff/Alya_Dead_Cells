@@ -9,6 +9,15 @@ var timer_value = 0
 
 func _ready():
 	$Timer.timeout.connect(_on_timer_timeout)
+	var p_scene = load("res://Scenes/Player.tscn")
+	player = p_scene.instantiate()
+	player.global_position = $SpawnPoint.global_position
+	add_child(player)
+	
+	if Global.selected_sprite_frames != null:
+		var anim = player.get_node("AnimatedSprite2D")
+		anim.sprite_frames = Global.selected_sprite_frames
+		anim.play("idle")
 	
 func _on_timer_timeout():
 	timer_value += 1

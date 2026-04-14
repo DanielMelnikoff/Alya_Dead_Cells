@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://ht66rch8girt"]
+
+[ext_resource type="Script" uid="uid://bn16gwxkbjwb3" path="res://Scripts/character_menu.gd" id="1_0nwyu"]
+[ext_resource type="SpriteFrames" uid="uid://byi3pandnspvc" path="res://Sprites/Anims/blue_anim.tres" id="2_0nwyu"]
+[ext_resource type="Texture2D" uid="uid://bgdd3qvfk1pg" path="res://Sprites/bg/set1_background.png" id="3_78cgi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0nwyu"]
+font_size = 120
+font_color = Color(0.28786853, 0.4697305, 0.43995562, 1)
+
+[node name="Control" type="Control" unique_id=2121401732]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 949.0
+offset_top = 418.0
+offset_right = 989.0
+offset_bottom = 458.0
+script = ExtResource("1_0nwyu")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1661962530]
+show_behind_parent = true
+light_mask = 0
+z_index = -3
+layout_mode = 0
+offset_left = -944.0
+offset_top = -391.0
+offset_right = 973.0
+offset_bottom = 683.0
+texture = ExtResource("3_78cgi")
+
+[node name="Preview" type="AnimatedSprite2D" parent="TextureRect" unique_id=1679476670]
+position = Vector2(944, 571.5)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("2_0nwyu")
+animation = &"idle"
+
+[node name="PrevBtn" type="Button" parent="TextureRect" unique_id=1823776764]
+layout_mode = 0
+offset_left = 796.0
+offset_top = 551.5
+offset_right = 814.0
+offset_bottom = 582.5
+text = "<"
+
+[node name="NextBtn" type="Button" parent="TextureRect" unique_id=1167297077]
+layout_mode = 0
+offset_left = 1075.0
+offset_top = 551.5
+offset_right = 1093.0
+offset_bottom = 582.5
+text = ">"
+
+[node name="StartBtn" type="Button" parent="TextureRect" unique_id=258875217]
+layout_mode = 0
+offset_left = 882.0
+offset_top = 677.5
+offset_right = 1006.0
+offset_bottom = 725.5
+text = "Play"
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=814644288]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 56.0
+offset_right = 1407.0
+offset_bottom = 221.0
+text = "DISTANT LANDS"
+label_settings = SubResource("LabelSettings_0nwyu")

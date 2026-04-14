@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Dead_Cells"
-run/main_scene="uid://brvs8csch4pr8"
+run/main_scene="uid://ht66rch8girt"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://b7htm54b6683m"
 
 [display]
 

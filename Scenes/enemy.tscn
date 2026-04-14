@@ -52,7 +52,8 @@ animations = [{
 radius = 32.06244
 
 [sub_resource type="LabelSettings" id="LabelSettings_0830c"]
-font_size = 24
+font_size = 40
+font_color = Color(0.8, 0.2, 0.2, 1)
 
 [node name="Enemy2D" type="CharacterBody2D" unique_id=632468046 groups=["enemy"]]
 script = ExtResource("1_1f0kj")
@@ -87,10 +88,10 @@ position = Vector2(-2, 19)
 shape = SubResource("CircleShape2D_0830c")
 
 [node name="Label" type="Label" parent="." unique_id=416661288]
-offset_left = -101.0
-offset_top = -113.0
-offset_right = 98.0
-offset_bottom = -79.0
+offset_left = -99.0
+offset_top = -142.0
+offset_right = 100.0
+offset_bottom = -87.0
 text = "120"
 label_settings = SubResource("LabelSettings_0830c")
 horizontal_alignment = 1

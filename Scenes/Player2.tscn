@@ -1,0 +1,260 @@
+[gd_scene format=3 uid="uid://csx0e34gqyd0v"]
+
+[ext_resource type="Texture2D" path="res://Sprites/Player_Skins/Player Blue/playerBlue_stand.png" id="2_yp5jh"]
+[ext_resource type="Texture2D" path="res://Sprites/Player_Skins/Player Blue/playerBlue_up1.png" id="3_phhv8"]
+[ext_resource type="Texture2D" path="res://Sprites/Player_Skins/Player Blue/playerBlue_up2.png" id="4_30ijx"]
+[ext_resource type="Texture2D" path="res://Sprites/Player_Skins/Player Blue/playerBlue_up3.png" id="5_w64td"]
+[ext_resource type="Texture2D" path="res://Sprites/Player_Skins/Player Blue/playerBlue_roll.png" id="6_2bi3a"]
+[ext_resource type="Texture2D" path="res://Sprites/Player_Skins/Player Blue/playerBlue_roll1.png" id="7_o5bsy"]
+[ext_resource type="Texture2D" path="res://Sprites/Player_Skins/Player Blue/playerBlue_roll3.png" id="8_65pas"]
+[ext_resource type="Texture2D" path="res://Sprites/Player_Skins/Player Blue/playerBlue_roll2.png" id="9_oh1g1"]
+[ext_resource type="Texture2D" path="res://Sprites/Player_Skins/Player Blue/playerBlue_walk1.png" id="10_yaodt"]
+[ext_resource type="Texture2D" path="res://Sprites/Player_Skins/Player Blue/playerBlue_walk2.png" id="11_wvrox"]
+[ext_resource type="Texture2D" path="res://Sprites/Player_Skins/Player Blue/playerBlue_walk3.png" id="12_n1cht"]
+
+[sub_resource type="GDScript" id="GDScript_nfgwa"]
+script/source = "extends CharacterBody2D
+
+const SPEED = 500.0
+const JUMP_VELOCITY = -900
+
+var HP = 100
+var damage = 30
+var jumpable = true
+var damagable = true
+var enemy = null
+
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+var current_animation: String = \"\"
+@onready var pickup_area: Area2D = $PickupArea
+
+func _ready():
+	pickup_area.area_entered.connect(_on_area_entered)
+	$HealthDecayTimer.timeout.connect(_on_health_decay_timeout)
+
+
+#Даник, твоя часть кода, получение дамага
+func _take_damage(amount, source_pos):
+	HP -= amount
+	$Camera2D/HP.text = str(HP)
+	if HP<=0:
+		die()
+	var direction = sign(abs(global_position.x)-abs(source_pos.x))
+	velocity.x = move_toward(direction*1000, 0, SPEED)
+	velocity.y = -400
+	damagable = false
+	await get_tree().create_timer(0.8).timeout
+	damagable = true
+	
+func die():
+	await get_tree().create_timer(1.3).timeout
+	get_tree().reload_current_scene()
+
+func _physics_process(delta: float) -> void:
+	if is_on_floor():
+		jumpable=true
+	if not is_on_floor() and Input.is_action_just_pressed(\"ui_accept\") and jumpable:
+		velocity.y = JUMP_VELOCITY
+		jumpable = false
+
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+		
+	if Input.is_key_pressed(KEY_D):
+		velocity.x = SPEED
+		if Input.is_key_pressed(KEY_SHIFT):
+			velocity.x = SPEED*2
+	elif Input.is_key_pressed(KEY_A):
+		velocity.x = -SPEED
+		if Input.is_key_pressed(KEY_SHIFT):
+			velocity.x = -SPEED*2
+	else: 
+		if damagable: 
+			velocity.x = 0
+			
+	if enemy and enemy.damagable and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		enemy.take_damage(damage)
+		
+
+	move_and_slide()
+	
+	update_animation()
+
+#анимация перса
+func update_animation() -> void:
+	var new_animation: String
+	
+	var direction: float = 0.0
+	if Input.is_key_pressed(KEY_D):
+		direction = 1.0
+	elif Input.is_key_pressed(KEY_A):
+		direction = -1.0
+	
+	if not is_on_floor():
+		new_animation = \"jump\"
+	elif Input.is_key_pressed(KEY_SHIFT):
+		new_animation = \"roll\"
+	elif direction != 0:
+		new_animation = \"walk\"
+	else:
+		new_animation = \"idle\"
+	
+	if new_animation != current_animation:
+		current_animation = new_animation
+		animated_sprite.play(new_animation)
+	
+	if direction > 0:
+		animated_sprite.flip_h = false
+	elif direction < 0:
+		animated_sprite.flip_h = true
+
+#при касании с яблоком хилит на 20 хп и удаляет его
+
+func _on_area_entered(area: Area2D):
+	if area.get_parent().is_in_group(\"health\"):
+		var hp_label = get_node(\"Camera2D/HP\")
+		await get_tree().create_timer(0.2).timeout
+		HP += 15
+		damage += 2
+		hp_label.text=str(HP)
+		area.get_parent().queue_free()
+
+#каждые 2 секунды отнимает хп
+
+func _on_health_decay_timeout():
+	if HP > 100:
+		HP -= 1
+		$Camera2D/HP.text = str(HP)
+		
+func _on_pickup_area_body_entered(body):
+	if body.is_in_group(\"enemy\"):
+		enemy = body
+
+
+func _on_pickup_area_body_exited(body):
+	if body == enemy:
+		enemy = null
+"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m1xf0"]
+radius = 65.0
+height = 140.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_wvuc5"]
+font_size = 24
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w46ye"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yp5jh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_phhv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_30ijx")
+}, {
+"duration": 30.0,
+"texture": ExtResource("5_w64td")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_2bi3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_o5bsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_65pas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_oh1g1")
+}],
+"loop": true,
+"name": &"roll",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_yaodt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wvrox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_n1cht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wvrox")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iamjx"]
+radius = 168.0
+height = 336.0
+
+[node name="Player2" type="CharacterBody2D" unique_id=359462180]
+script = SubResource("GDScript_nfgwa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1326032861]
+position = Vector2(-3, -40)
+shape = SubResource("CapsuleShape2D_m1xf0")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1050262113]
+position = Vector2(-2, 2)
+zoom = Vector2(0.4, 0.4)
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+drag_left_margin = 0.3
+drag_top_margin = 0.3
+drag_right_margin = 0.3
+drag_bottom_margin = 0.3
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="HP" type="Label" parent="Camera2D" unique_id=541036186]
+offset_left = -78.0
+offset_top = -165.0
+offset_right = 79.0
+offset_bottom = -120.0
+text = "100"
+label_settings = SubResource("LabelSettings_wvuc5")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1550656594]
+position = Vector2(0, -44.000004)
+scale = Vector2(2.7222223, 2.7222223)
+sprite_frames = SubResource("SpriteFrames_w46ye")
+animation = &"roll"
+speed_scale = 2.0
+
+[node name="PickupArea" type="Area2D" parent="." unique_id=467177171]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=1146818637]
+position = Vector2(-3, -41)
+shape = SubResource("CapsuleShape2D_iamjx")
+
+[node name="HealthDecayTimer" type="Timer" parent="." unique_id=1654267936]
+wait_time = 0.5
+autostart = true
+
+[connection signal="body_entered" from="PickupArea" to="." method="_on_pickup_area_body_entered"]
+[connection signal="body_exited" from="PickupArea" to="." method="_on_pickup_area_body_exited"]
+[connection signal="timeout" from="HealthDecayTimer" to="." method="_on_health_decay_timeout"]
