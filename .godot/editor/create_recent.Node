@@ -1,5 +1,7 @@
-TextureRect
 Label
+AudioStreamPlayer
+AudioStreamPlayer2D
+TextureRect
 CanvasLayer
 AnimatedSprite2D
 Marker2D
@@ -10,5 +12,3 @@ Control
 VBoxContainer
 CollisionShape2D
 Area2D
-Timer
-Parallax2D

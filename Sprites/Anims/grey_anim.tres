@@ -1,5 +1,6 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://buklg2o8ljouu"]
 
+[ext_resource type="Texture2D" uid="uid://qinj6o7bsw1k" path="res://Sprites/Player_Skins/Player_Grey/playerGrey_dead.png" id="1_028ik"]
 [ext_resource type="Texture2D" uid="uid://dditnjb7and7x" path="res://Sprites/Player_Skins/Player_Grey/playerGrey_stand.png" id="1_ftqqb"]
 [ext_resource type="Texture2D" uid="uid://buhfoms1d1xmt" path="res://Sprites/Player_Skins/Player_Grey/playerGrey_up1.png" id="2_028ik"]
 [ext_resource type="Texture2D" uid="uid://uvy4d700higf" path="res://Sprites/Player_Skins/Player_Grey/playerGrey_up2.png" id="3_6vo6y"]
@@ -14,6 +15,14 @@
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_028ik")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 1.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_ftqqb")

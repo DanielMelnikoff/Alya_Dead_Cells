@@ -14,6 +14,8 @@ var current_animation: String = ""
 @onready var pickup_area: Area2D = $PickupArea
 
 func _ready():
+	$Camera2D/HP.visible = true
+	$PickupArea.monitorable = true
 	pickup_area.area_entered.connect(_on_area_entered)
 	$HealthDecayTimer.timeout.connect(_on_health_decay_timeout)
 
@@ -32,28 +34,30 @@ func _take_damage(amount, source_pos):
 	damagable = true
 	
 func die():
-	await get_tree().create_timer(1.3).timeout
-	get_tree().reload_current_scene()
+	$Camera2D/HP.visible = false
+	$PickupArea.monitorable = false
+	await get_tree().create_timer(3).timeout
+	get_tree().change_scene_to_file("res://Scenes/characterMenu.tscn")
 
 func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		jumpable=true
-	if not is_on_floor() and Input.is_action_just_pressed("ui_accept") and jumpable:
+	if not is_on_floor() and Input.is_action_just_pressed("ui_accept") and jumpable and HP>0:
 		velocity.y = JUMP_VELOCITY
 		jumpable = false
 
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and HP>0:
 		velocity.y = JUMP_VELOCITY
-	if not is_on_floor():
+	if not is_on_floor() and HP>0:
 		velocity += get_gravity() * delta
 		
-	if Input.is_key_pressed(KEY_D):
-		velocity.x = SPEED
-		if Input.is_key_pressed(KEY_SHIFT):
+	if Input.is_key_pressed(KEY_D) and HP>0:
+		velocity.x = SPEED 
+		if Input.is_key_pressed(KEY_SHIFT) and HP>0:
 			velocity.x = SPEED*2
-	elif Input.is_key_pressed(KEY_A):
+	elif Input.is_key_pressed(KEY_A) and HP>0:
 		velocity.x = -SPEED
-		if Input.is_key_pressed(KEY_SHIFT):
+		if Input.is_key_pressed(KEY_SHIFT) and HP>0:
 			velocity.x = -SPEED*2
 	else: 
 		if damagable: 
@@ -79,10 +83,12 @@ func update_animation() -> void:
 	
 	if not is_on_floor():
 		new_animation = "jump"
-	elif Input.is_key_pressed(KEY_SHIFT):
+	elif Input.is_key_pressed(KEY_SHIFT) and velocity.x!=0:
 		new_animation = "roll"
 	elif direction != 0:
 		new_animation = "walk"
+	elif HP<=0:
+		new_animation = "dead"
 	else:
 		new_animation = "idle"
 	
@@ -95,7 +101,7 @@ func update_animation() -> void:
 	elif direction < 0:
 		animated_sprite.flip_h = true
 
-#при касании с яблоком хилит на 20 хп и удаляет его
+#при касании с яблоком хилит на 15 хп, двёт+2 к урону и удаляет его
 
 func _on_area_entered(area: Area2D):
 	if area.get_parent().is_in_group("health"):
@@ -106,7 +112,7 @@ func _on_area_entered(area: Area2D):
 		hp_label.text=str(HP)
 		area.get_parent().queue_free()
 
-#каждые 2 секунды отнимает хп
+#каждые полсекунды отнимает хп
 
 func _on_health_decay_timeout():
 	if HP > 100:

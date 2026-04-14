@@ -20,9 +20,11 @@ func _physics_process(delta):
 	
 	if target_player:
 		var dist = target_player.global_position.x - global_position.x
-		direction = sign(dist)
-		velocity.x = direction * SPEED
-		
+		if abs(dist)<=20:
+			velocity.x=0
+		else:
+			direction = sign(dist)
+			velocity.x = direction * SPEED
 		if is_on_wall() and is_on_floor():
 			velocity.y = -JUMP_VELOCITY
 	else:
@@ -59,7 +61,7 @@ func take_damage(amount):
 	if HP<=0:
 		die()
 	damagable = false
-	await get_tree().create_timer(0.2).timeout
+	await get_tree().create_timer(0.5).timeout
 	damagable = true
 
 func die():
